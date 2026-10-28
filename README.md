@@ -4,9 +4,18 @@ An end-to-end synthetic analytics project that checks whether booked television
 commercials have qualifying delivery evidence and whether invoices match
 contract-defined billable value after credits.
 
-**BI is deferred by request.** This phase includes the data pipeline, SQL models,
-analysis notebooks, validation, reports and Tableau-ready datasets. No Tableau,
-Power BI or other BI dashboard is created.
+The project includes a reproducible data pipeline, SQL models, analysis notebooks,
+validation, reporting and published Tableau dashboards.
+
+## Live Tableau dashboards
+
+| Dashboard | Open in Tableau Public |
+|---|---|
+| Delivery Overview | [View dashboard](https://public.tableau.com/app/profile/isfaque.ansari5273/viz/TV_Delivery_Dashboard/DeliveryOverview) |
+| Billing Reconciliation | [View dashboard](https://public.tableau.com/app/profile/isfaque.ansari5273/viz/TV_Billing_Dashboard/BillingReconciliation) |
+
+Built and published by Isfaque Ansari using the project's synthetic TV advertising
+data. The dashboards complement the SQL/Python analysis and reconciliation reports.
 
 ## Business questions
 
@@ -57,7 +66,7 @@ bash scripts/run_project.sh
 The script generates nine source tables, validates contracts, builds a SQLite
 warehouse, prepares delivery/finance facts, reconciles source totals, estimates
 exploratory statistics, verifies PostgreSQL behavior/access/index plans, executes
-all four notebooks, runs tests and packages full datasets for the next phase.
+all four notebooks, runs tests and packages full datasets for Tableau analysis.
 
 `outputs/latest.json` points to the completed snapshot. Each run keeps its exact
 raw inputs, independent oracle files, database, reports, Tableau-ready CSVs and
@@ -147,5 +156,5 @@ an analyst investigation aid, not a BI dashboard.
 
 Actual review, mentoring and cross-functional collaboration cannot be proven
 by code alone. Proposed reviewer responsibilities are documented without
-claiming those activities occurred. No live deployment, client data access,
+claiming those activities occurred. No production pipeline deployment, client data access,
 real financial impact, ratings, clicks, ROAS or retention analysis is claimed.
