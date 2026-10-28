@@ -1,0 +1,13 @@
+station_id,station_name,market,timezone,delivery_partner
+1,Synthetic station 1,New York,America/New_York,Partner 1
+2,Synthetic station 2,Boston,America/New_York,Partner 2
+3,Synthetic station 3,Chicago,America/Chicago,Partner 3
+4,Synthetic station 4,Dallas,America/Chicago,Partner 4
+5,Synthetic station 5,Denver,America/Denver,Partner 1
+6,Synthetic station 6,Phoenix,America/Phoenix,Partner 2
+7,Synthetic station 7,Los Angeles,America/Los_Angeles,Partner 3
+8,Synthetic station 8,Seattle,America/Los_Angeles,Partner 4
+9,Synthetic station 9,New York,America/New_York,Partner 1
+10,Synthetic station 10,Boston,America/New_York,Partner 2
+11,Synthetic station 11,Chicago,America/Chicago,Partner 3
+12,Synthetic station 12,Dallas,America/Chicago,Partner 4

@@ -1,0 +1,13 @@
+campaign_id,advertiser_id,campaign_name,start_date,end_date,creative_id
+1,1,Synthetic campaign 1,2026-01-13,2026-02-23,CR0001
+2,2,Synthetic campaign 2,2026-01-18,2026-03-01,CR0002
+3,3,Synthetic campaign 3,2026-04-30,2026-05-22,CR0003
+4,4,Synthetic campaign 4,2026-01-27,2026-02-26,CR0004
+5,5,Synthetic campaign 5,2026-01-11,2026-02-13,CR0005
+6,6,Synthetic campaign 6,2026-04-05,2026-04-28,CR0006
+7,7,Synthetic campaign 7,2026-04-19,2026-05-10,CR0007
+8,8,Synthetic campaign 8,2026-01-16,2026-02-17,CR0008
+9,9,Synthetic campaign 9,2026-03-23,2026-04-13,CR0009
+10,10,Synthetic campaign 10,2026-02-09,2026-03-13,CR0010
+11,11,Synthetic campaign 11,2026-01-15,2026-02-07,CR0011
+12,12,Synthetic campaign 12,2026-02-21,2026-03-20,CR0012

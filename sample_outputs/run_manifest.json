@@ -1,0 +1,101 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "as_of": "2026-07-15T00:00:00Z",
+  "source_sha256": {
+    "advertisers.csv": "60e5f447fc39276de9f88cb56eebe9e7f7174c5bb1eed1f850466d466b9e34c8",
+    "airing_logs.csv": "d0e6605a85b030bef3dbabab197587d35b21e8d87d5adf9560877f775b0e859e",
+    "booking_lines.csv": "ca93002622e93b2fa8bd6b8a93277931abfa5489b52ef05145a45bd35c09f265",
+    "campaigns.csv": "6545c5800af1390d3296545f3ecae0e8f00a3a6d63693b9a0eea6a721e995be3",
+    "commitments.csv": "a4431469d2b019958946096c4fe4da122ce6a131cc2e3cd5e64dee1db8ddb4d5",
+    "credits.csv": "5141ad82f10dd89d8c2a89d9f8776282a9d6464ae095125d7f898e18cfa00210",
+    "invoice_lines.csv": "b903bfcf1577ada4b26b70f08ac84a69b75a5fc80111c4d16a205e9d1009e794",
+    "scheduled_spots.csv": "fdae973f201ab83d6bed426e21380059f2d37ecadfc3df5ad7162da0695823f5",
+    "stations.csv": "fed191bb3d5f4764e8ee3ca79d660c6d985c7a3b7eb56e1ed93e59bd0d9ce6bf"
+  },
+  "source_rows": {
+    "advertisers": 30,
+    "campaigns": 120,
+    "stations": 24,
+    "booking_lines": 360,
+    "commitments": 18000,
+    "scheduled_spots": 18737,
+    "airing_logs": 18217,
+    "invoice_lines": 16732,
+    "credits": 408
+  },
+  "validation": {
+    "schema": "PASS",
+    "synthetic": true,
+    "tables": {
+      "advertisers": {
+        "rows": 30,
+        "primary_key": "advertiser_id"
+      },
+      "campaigns": {
+        "rows": 120,
+        "primary_key": "campaign_id"
+      },
+      "stations": {
+        "rows": 24,
+        "primary_key": "station_id"
+      },
+      "booking_lines": {
+        "rows": 360,
+        "primary_key": "booking_line_id"
+      },
+      "commitments": {
+        "rows": 18000,
+        "primary_key": "commitment_id"
+      },
+      "scheduled_spots": {
+        "rows": 18737,
+        "primary_key": "scheduled_spot_id"
+      },
+      "airing_logs": {
+        "rows": 18217,
+        "primary_key": "ingestion_id"
+      },
+      "invoice_lines": {
+        "rows": 16732,
+        "primary_key": "invoice_line_id"
+      },
+      "credits": {
+        "rows": 408,
+        "primary_key": "credit_id"
+      }
+    },
+    "quarantine_candidates": {
+      "unmatched_schedule_rows": 1,
+      "unmatched_invoice_rows": 1,
+      "unmatched_credit_rows": 1
+    }
+  },
+  "statistics": {
+    "scope": "Synthetic due, noncancelled commitments only",
+    "observations": 17438,
+    "clusters": 120,
+    "bootstrap_seed": 42,
+    "causal_claim": false,
+    "bias_notes": [
+      "The generator explicitly assigns station, daypart and duration effects.",
+      "Future or cancelled commitments are excluded; raw feed latency affects earlier snapshots.",
+      "Within-campaign resampling addresses one source of dependence, not all possible dependence.",
+      "Regression intervals are nominal exploratory intervals, without multiple-testing adjustment.",
+      "Synthetic associations do not establish real advertiser or station behavior."
+    ],
+    "planned_contrast": {
+      "comparison": "Prime minus Overnight delivery rate",
+      "estimate": 0.024416765317505473,
+      "ci_low": 0.015246953007002063,
+      "ci_high": 0.03317221325839202,
+      "zero_excluded": true
+    },
+    "regression_status": "CONVERGED",
+    "regression_outcome": "Failure of original scheduled delivery",
+    "adjustment": "Station fixed effects and 60-second duration indicator",
+    "standard_errors": "Campaign-cluster robust",
+    "interpretation": "Conditional associations with original delivery failure, not causal effects or future predictions"
+  },
+  "dashboard_status": "Deferred by request; Tableau datasets only"
+}
