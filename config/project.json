@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "n_commitments": 18000,
+  "n_advertisers": 30,
+  "n_campaigns": 120,
+  "n_stations": 24,
+  "start_date": "2026-01-01",
+  "end_date": "2026-06-30",
+  "final_as_of": "2026-07-15T00:00:00Z",
+  "log_grace_hours": 48,
+  "makegood_grace_days": 7,
+  "bootstrap_repetitions": 400,
+  "currency": "USD"
+}

@@ -1,0 +1,11 @@
+control,source_value,modeled_value,difference,unit,status
+commitment_grain,18000,18000,0,commitments,MATCH
+due_commitments,17438,17438,0,commitments,MATCH
+visible_airing_records,18217,18217,0,source rows,MATCH
+canonical_airing_events,17812,17812,0,events,MATCH
+visible_invoice_lines,16732,16732,0,invoice lines,MATCH
+gross_invoices,301539914,301539914,0,USD cents,MATCH
+applied_credit_amount,610500,610500,0,USD cents,MATCH
+full_ledger_net_including_quarantine,300928414,300928414,0,USD cents,MATCH
+matched_billing_bridge,300917069,300917069,0,USD cents,MATCH
+expected_to_billed_bridge,300917069,300917069,0,USD cents,MATCH

@@ -1,0 +1,26 @@
+{
+  "scope": "Synthetic due, noncancelled commitments only",
+  "observations": 17438,
+  "clusters": 120,
+  "bootstrap_seed": 42,
+  "causal_claim": false,
+  "bias_notes": [
+    "The generator explicitly assigns station, daypart and duration effects.",
+    "Future or cancelled commitments are excluded; raw feed latency affects earlier snapshots.",
+    "Within-campaign resampling addresses one source of dependence, not all possible dependence.",
+    "Regression intervals are nominal exploratory intervals, without multiple-testing adjustment.",
+    "Synthetic associations do not establish real advertiser or station behavior."
+  ],
+  "planned_contrast": {
+    "comparison": "Prime minus Overnight delivery rate",
+    "estimate": 0.024416765317505473,
+    "ci_low": 0.015246953007002063,
+    "ci_high": 0.03317221325839202,
+    "zero_excluded": true
+  },
+  "regression_status": "CONVERGED",
+  "regression_outcome": "Failure of original scheduled delivery",
+  "adjustment": "Station fixed effects and 60-second duration indicator",
+  "standard_errors": "Campaign-cluster robust",
+  "interpretation": "Conditional associations with original delivery failure, not causal effects or future predictions"
+}

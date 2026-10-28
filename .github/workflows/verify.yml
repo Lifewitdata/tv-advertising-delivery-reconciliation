@@ -1,0 +1,32 @@
+name: Verify TV advertising analytics
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  complete-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: pip install -r requirements.txt
+      - run: npm ci
+      - run: bash scripts/run_project.sh
+      - name: Locate completed snapshot
+        id: snapshot
+        run: python -c "import os; from tvads.pipeline import current_output; p=current_output(); open(os.environ['GITHUB_OUTPUT'],'a').write('path='+str(p)+'\n')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tv-advertising-verified-data
+          path: ${{ steps.snapshot.outputs.path }}/tv_advertising_verified_data.zip
+          retention-days: 30
