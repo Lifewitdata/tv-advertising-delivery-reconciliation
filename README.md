@@ -17,7 +17,6 @@ Power BI or other BI dashboard is created.
 - Can source counts and money be traced through preparation to reporting without fanout?
 
 The scenario is inspired by the local television advertising platform in
-[GIGA IT's Data Analyst SQL Senior vacancy](https://jobs.jobvite.com/jobs-gigait/job/oTE0AfwR).
 All data and commercial rules are invented for the case study. No company/client
 systems, records, real performance or confidential contracts are represented.
 
